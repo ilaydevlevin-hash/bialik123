@@ -1,4 +1,20 @@
-/* סטייל בסיסי לכל הדפים */
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אודות - בר קפה ביאליק</title>
+    <style>
+/* סטייל בסיסי לכל העמודים */
+.first-info {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +29,11 @@ body {
 }
 
 header {
-    background: #E6D06E; /* רקע צהוב הלוגו */
+    background: #E6D06E;
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: relative; /* בשביל ה-burger menu */
+    position: relative;
 }
 
 header h1 {
@@ -43,7 +59,7 @@ nav a:hover {
     color: #333;
 }
 
-/* כפתור burger (מוסתר בדסקטופ) */
+/* כפתור burger */
 .nav-toggle {
     display: none;
     font-size: 28px;
@@ -56,8 +72,8 @@ nav a:hover {
     right: 20px;
 }
 
-/* סקשן גלריה */
-section, .first-info, .second-info {
+/* סקשן בסיסי */
+section {
     padding: 40px 20px;
     max-width: 1200px;
     margin: auto;
@@ -71,13 +87,6 @@ h2 {
 
 p {
     margin-bottom: 15px;
-}
-
-footer {
-    background: #E6D06E;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
 }
 
 img {
@@ -101,34 +110,11 @@ button:hover {
     background: #44394e;
 }
 
-/* סקשן גלריה */
+/* סקשן גלריה אם יש */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
-}
-
-/* first-info */
-.first-info {
-    background: linear-gradient(#E6D06E, #eaf6fb);
-    padding: 40px 20px;
-    text-align: center;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #333;
-}
-
-.first-info img {
-    width: 150px;      /* רוחב בדסקטופ */
-    height: auto;      /* שמירה על פרופורציות */
-    border-radius: 20px;
-    overflow: hidden;
-    margin: 0 auto 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    object-fit: cover;
 }
 
 /* רספונסיביות */
@@ -142,7 +128,7 @@ button:hover {
         text-align: center;
     }
 
-    section, .first-info, .second-info {
+    section {
         padding: 20px 10px;
     }
 
@@ -169,34 +155,66 @@ button:hover {
         display: flex;
     }
 
-    /* first-info img רספונסיבית בטלפון */
-    .first-info img {
-        width: 80%;       /* תופס 80% מרוחב הקונטיינר */
-        max-width: 120px; /* מגבלה מקסימלית */
-        height: auto;     /* שמירה על פרופורציות */
-    }
-
     /* gallery רספונסיבי לטלפון */
     .gallery {
         grid-template-columns: 1fr; /* כל תמונה בשורה אחת */
         gap: 15px;
     }
 
-    .flower-image {
-        width: 100%;   /* תמונות תופסות את רוחב הקונטיינר */
-        height: auto;  /* שמירה על פרופורציות */
+    .gallery img {
+        width: 100%;
+        height: auto;
         border-radius: 10px;
     }
 }
-.flower-image {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
 
-.flower-image:hover {
-  transform: scale(1.05);
+/* footer */
+footer {
+    background: #E6D06E;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
 }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>בר‑קפה ביאליק</h1>
+    <nav>
+        <a href="index.html">בית</a>
+        <a href="about.html">אודות</a>
+        <a href="menu.html">תפריט</a>
+        <a href="events.html">אירועים</a>
+        <a href="gallery.html">גלריה</a>
+        <a href="contact.html">צור קשר</a>
+    </nav>
+</header>
+
+<section>
+    <h2>אודותינו</h2>
+    <p>ביאליק הוא בר‑קפה חברתי ותרבותי המציע שילוב של קפה איכותי, מגוון בירות מהחבית ואירועים מיוחדים. המקום מפגיש בין שכנים, חברים ומבקרים מכל הגילאים לאווירה אותנטית וביתית.</p>
+</section>
+<div class="first-info">
+     <p><strong>שם העסק:</strong>בר-קפה ביאליק</p>
+    <p><strong>כתובת:</strong> רחוב הדוגמא 12, באר שבע</p>
+    <p><strong>טלפון:</strong> <a href="tel:+972500000000">050-0000000</a></p>
+    <p><strong>מייל:</strong> <a href="mailto:"></a></p>
+</div>
+<footer>
+    &copy; 2026 בר‑קפה ביאליק
+</footer>
+<script>
+const toggle = document.createElement('button');
+toggle.classList.add('nav-toggle');
+toggle.innerHTML = '☰';
+document.querySelector('header').appendChild(toggle);
+
+const nav = document.querySelector('header nav');
+
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+});
+</script>
+</body>
+</html>
