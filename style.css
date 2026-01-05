@@ -1,0 +1,182 @@
+/* סטייל בסיסי לכל הדפים */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #FFF8E6; /* רקע בהיר צהבהב */
+    color: #5A4E63; /* סגול כהה לטקסט */
+    line-height: 1.6;
+}
+
+header {
+    background: #E6D06E; /* רקע צהוב הלוגו */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative; /* בשביל ה-burger menu */
+}
+
+header h1 {
+    color: #5A4E63;
+    font-size: 2.2rem;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5A4E63;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #333;
+}
+
+/* כפתור burger (מוסתר בדסקטופ) */
+.nav-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #5A4E63;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+/* סקשן גלריה */
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #5A4E63;
+    font-size: 1.8rem;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+footer {
+    background: #E6D06E;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+button {
+    padding: 10px 20px;
+    background: #5A4E63;
+    color: #FFF8E6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #44394e;
+}
+
+/* סקשן גלריה */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    /* הכפתור מופיע */
+    .nav-toggle {
+        display: block;
+    }
+
+    /* nav מוסתר כברירת מחדל */
+    nav {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #E6D06E;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+        display: none;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav.show {
+        display: flex;
+    }
+}
+.first-info {
+  background: linear-gradient( #E6D06E
+    , #eaf6fb);
+  padding: 40px 20px;
+  text-align: center;
+  height: 400px; /* חשוב כדי שה-background יהיה ברור */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+.first-info img {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.second-info {
+    
+}

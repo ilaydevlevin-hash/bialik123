@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בר קפה ביאליק</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>בר‑קפה ביאליק</h1>
+    <!-- כפתור Burger -->
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav>
+        <a href="index.html">בית</a>
+        <a href="about.html">אודות</a>
+        <a href="menu.html">תפריט</a>
+        <a href="events.html">אירועים</a>
+        <a href="gallery.html">גלריה</a>
+        <a href="contact.html">צור קשר</a>
+    </nav>
+</header>
+
+<!-- סלייד ראשי / מבוא -->
+<div class="first-info">
+    <h2>בר קפה שכונתי בלב באר שבע</h2>
+    <p>קפה איכותי, בירה קרה ומוזיקה חיה – כל האווירה בשכונה במקום אחד.</p>
+    <img src="logo.png" alt="בר קפה ביאליק" class="logo">
+    <button onclick="window.location.href='contact.html'">קבעו מקום עכשיו</button>
+</div>
+
+<!-- סקשן תפריט קצר -->
+<div class="second-info">
+    <h2>טעימה מהתפריט שלנו</h2>
+    <div class="gallery">
+        <img src="images/coffee.jpg" alt="קפה אספרסו">
+        <img src="images/beers.jpg" alt="בירה מהחבית">
+        <img src="images/cakes.jpg" alt="עוגות ומאפים">
+    </div>
+    <p>אספרסו, קפוצ'ינו, בירות מהחבית, סלטים, ארוחות קלות ועוגות – הכל במקום אחד.</p>
+    <button onclick="window.location.href='menu.html'">לצפייה בתפריט המלא</button>
+</div>
+
+<!-- סקשן אירועים -->
+<section>
+    <h2>אירועים ומופעים</h2>
+    <p>סטנדאפ, הופעות חיות, סדנאות קפה ושולחנות נושא – האווירה הכי חיה בעיר.</p>
+    <img src="images/events.jpg" alt="אירועים בבר קפה ביאליק">
+    <button onclick="window.location.href='events.html'">לפרטים נוספים</button>
+</section>
+
+<!-- גלריה קצרה -->
+<section>
+    <h2>גלריית המקום</h2>
+    <div class="gallery">
+        <img src="images/gallery1.jpg" alt="תמונה 1">
+        <img src="images/gallery2.jpg" alt="תמונה 2">
+        <img src="images/gallery3.jpg" alt="תמונה 3">
+    </div>
+    <button onclick="window.location.href='gallery.html'">לכל התמונות</button>
+</section>
+
+<!-- יצירת קשר -->
+<section>
+    <h2>צור קשר</h2>
+    <p>טלפון: 058‑5676630</p>
+    <p>כתובת: חיים נחמן ביאליק 26, באר שבע</p>
+    <p>שעות פתיחה: א’–ה’ 09:00–21:00, ו’ 09:00–14:00</p>
+    <button onclick="window.location.href='contact.html'">צרו קשר</button>
+</section>
+
+<footer>
+    &copy; 2026 בר‑קפה ביאליק
+</footer>
+
+<!-- JS להפעלת Burger Menu -->
+<script>
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('header nav');
+
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+});
+</script>
+
+</body>
+</html>
