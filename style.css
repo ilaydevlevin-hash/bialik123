@@ -200,3 +200,15 @@ button:hover {
 .flower-image:hover {
   transform: scale(1.05);
 }
+.first123-info {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.firt {
+    margin-right: 100px;
+}
